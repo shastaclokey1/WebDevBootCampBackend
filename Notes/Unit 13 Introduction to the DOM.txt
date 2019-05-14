@@ -1,0 +1,63 @@
+Introduction to the DOM
+
+Objectives: (1) Define what the DOM is.
+	    (2) Understand why manipulating the DOM is awesome.
+	    (3) List a few examples of sites that use JS to manipulate the DOM.
+	    (4) Understand the SELECT, then MANIPULATE workflow.
+
+(1) - THe dom is the Document Object model.
+    - It is the interface between a web page's html and css.
+    - The DOM takes each HTML element and turns it into a JS object that can be manipulated.
+    - You don't need to wrap your brain around the ENTIRE dom. All you have to do is be able
+      to look up what different elements and dom attributes do to your site.
+
+(2) - Manipulating the dom allows you to create awesome interactive webpages like any social
+      media site out there, or like google, or even like patatap.com.
+    - Manipulating the dom is how 99 percent of the popular websites today build
+      their content.
+
+(3) - google, reddit, localsOwn, udemy, udacity
+
+(4) [Selecting]
+    - JS DOM selectors allow you to identify a page element and store it as a variable to set
+      properties on it later.
+    - document.querySelector("h1"); is an example of a selector that returns an object that
+      represents the h1.
+    - To manipulate the selected DOM elements, you simply use the . operator to identify which
+      element attribute you would like to change, then assign it to the value you want.
+    - This class variable assignment looks like domElement.style.chosen_style = "our_new_style";
+    - You can perform these DOM selections and manipulations on any existing website by writing
+      code in the console.
+    - The 5 main selectors we will use are getElementById(), getElementsByClassName(), 
+      getElementsByTagName(), querySelector(), and querySelectorAll().
+    - All 5 of these methods fall within the document object. Thus, using them involves a
+      dot operator call like document.querySelector().
+    - getElementById() returns a single html element object with the specified class name.
+    - getElementsByClassName() returns a list of all the element objects with the given class.
+    - getElementsByTagName() returns a list of all the element objects with the given tag.
+    - querySelector() allows us to use CSS style selector syntax to identify single html elements.
+    - querySelectorAll() functions the same way as querySelector(), except it returns all the
+      elements that match and stuffs them in a list in the order they appear on the page.
+    - The query selector functions are much more powerful than than the other three selectors.
+    [Manipulating]
+    - Manipulating elements is where the fun starts.
+Sty - The tag.style property has all of the possible styles that the identified object could have.
+    - A good way to dynamically change styles for an html document is to define multiple 
+      CSS style classes and using JS to switch between them at runtime.
+    - tag.classList.add(), .remove(), and .toggle() are three ways to manipulate the classes
+      included on html elements. Their names are pretty self explanitory.
+Tex - The tag.textContent grabs all the text content within a given tag and returns it as a
+      string. It goes down as many layers as it needs to get allllll the text and removes all
+      the tags.
+    - Be careful when using element.textContent = "some string" to set the content of an element.
+      This method will erase all internal structure tags within the element you are setting.
+    - The element.innerHTML function is a way to read or set the actuall html within an element.
+      This treats inputs as html and will render html formatted text inputs.
+    - There are good ways to add or subtract inner elements, but these "text editing" functions
+      are not the way you want to do it.
+Elm - Once you select an element, you can use the elm.setAttribute(atrib, value) command to change attributes.
+    - All of these dom manipulation techniques will work on any element, any attribute and any website.
+    - For instance, you can change the google logo to be any image you want, or change the link hooks to rout to chocolate rain.
+    - A fun way to mess with a ton of elements on a page at the same time is to select all the elements of
+      a given type (say links), store them in an array, then use a for loop to cycle through all the links
+      and set styles, change attributes, or mess with the element text. DOM manipulation is cool!

@@ -1,0 +1,58 @@
+Introduction to Javascript
+
+Objectives: (1) Learn to run JS in the chrome developer console.
+	    (2) Learn the 5 primitive datatypes in JS and be able to compare and contrast 
+	        them all.
+	    (3) Define variables with the var keyword and be able to use them fluently.
+	    (4) Learn to use the console.log, alert, and prompt functions available with 
+                basic Javascript.
+
+(1) - The JS chrome developer console is super easy. All you have to do to write some basic
+      JS is hit f12 in any instance of google chrome and flip over to the console tab. From
+      there you can write JS directly to the console withdow just like a matlab console or 
+      a python shell.
+    - This console acts more like a scripting functionality rather than an ide, but there
+      are plenty of tools to create full JS projects that I'm sure will be covered later on.
+
+(2) - There are 5 primitive data types that include numbers, strings, booleans, null and undefined.
+    - Numbers are all clumped together. There is no distinction between ints and floats.
+	* Simple mathematical operation (+, *, /) can be performed in the developer console.
+	* Numbers can be negated (-).
+	* JS follows the order of operations including parens ().
+	* Modulous operations can be performed using the % operator.
+    - Strings define any data stored as raw text.
+	* Single or double quotes can be used to encapsulate strings. You can't mix them.
+	* You can create a string with quotes inside it like so. "can't" or '"I am not a crook"'
+	* The + operator can be used to concatonate to strings.
+	* The backslash (\) operator can be used to escape from a string and use special characters
+	  like ', ", \, and others.
+	* Use the stringVar.length property to calculate the length of a string.
+	* Use array notation stringVar[] to access specific characters in a string (index starts at 0).
+    - Booleans are binary, true or false.
+    - Null and undefined are values that you have to look out for when using JS.
+	* If we declare a variable but don't instantiate it to a value, it is considered
+	  undefined.
+	* Null is used to explicitly set a variable to "nothing".
+
+(3) - Variables are containers that let us store some data, accessable by a named identifier,
+      and use that data later on. 
+    - The variable construction is as follows. var yourVariableName = yourVariable;
+    - Variables can be used with all of the primitive datatypes.
+    - Variables can be reasigned to other values after being instantiated.
+    - Varialbe types are "dynamic" so the type can be changed after instantiation.
+    - Best practice is to cammelCase JS variables.
+
+(4) - console.log and alert are both ways to display informaiton.
+    - console.log displays to the console.. duh haha.
+    - alert displays to a pop up alert spawned by google chrome.
+    - Prompt is a way to ask the user for an input.
+    - This input can be stored in a variable to be used later.
+    - None of these functions are suitable to be used in produciton sites, but they are good
+      tools to learn JS.
+
+[Including Separate JS Files]
+    - Make a separate .js file with all the JS code you want to run.
+    - Add a <script> tag to the html document that you want to run your JS code.
+    - I have one question. Does it matter whether you include the script tag in the head or body?
+    - Colt says that adding a script tag after the body elements will let the html load first,
+      but I've found that the html always waits to load until all the alerts/prompts complete.

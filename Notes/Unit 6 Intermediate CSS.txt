@@ -1,0 +1,53 @@
+Intermediate CSS
+
+Objectives: (1) Learn how to import fonts to use in our style sheets.
+	    (2) Expand our reprituar of fonts with the google fonts api.
+	    (3) Learn how to utilize the four components of the "Box Model".
+
+(1) - The font-family property allows you to set the font to different styles.
+    - Here's a good website to check the compatibility of different fonts. https://www.cssfontstack.com/
+    - The font-size can be set to an absolute pixel size (px) or a relative pixel size (em).
+    - A good practice is to set the foundation pixel size of the whole body, then to relatively
+      size the rest of the content based on that.
+    - Font weight allows you to set the "boldness" of an element.
+    - Line height and text align are pretty self explanatory. 
+    - Text decoration allows you to add underlines, strike throughs, and other fun, well, decorations.
+
+(2) - To embedd custom fonts from the google fonts api, go to fonts.google.com and pick a font,
+      customize it, then coppy the <link> tag on the embed tab and paste it into the <head>
+      of your html document.
+    - The embed tab will also specify the css command to activate this font.
+
+(3) - The box model is the principle we use to position elements on the page.
+    - The idea is that every element has a rectangular box around it.
+    - The content, padding, border and margin can be manipulated for each of these boxes.
+    - The border is the line which defines these boxes.
+    - Padding is the space surrounding the element which separates this content from the border.
+    - Margins create a buffer zone between the border of one box and any other.
+    - When specifying a margin, you can set all four values by using margin: top right bottom left;.
+    - Using auto with margin allows you to center elements on their respective axis.
+
+
+* That's all for the concepts! Now time to apply that knowledge to some fun projects.
+
+* Made a tic tac toe board by creating a 3x3 table and giving the vertMiddle and horzMiddle
+  table elements borders on specific sides.
+    - A cool trick I learned is, when specifying multiple classes on an html element, you
+      just leave a space between the two class names.
+    - I also had to use the margin: 0 auto; trick to center the table in the body.
+
+* Made an image blog by dropping pics into the body of the page, specifying the width of the img
+  elements in the css, floating the images in order to add custom margins, and calculating 
+  the correct spacing to use to display the images how we wanted across the page.
+    - HTML will add one space of white space between images by default.
+    - To eliminate this space so to add custom spacing with margins, "float" the images with
+      a css img selector, then have at it with the custom spacing.
+    - It never hurts to break out a little math when you want to space out elements on a page.
+
+* Made an editorial blog by setting up dynamically sized borders, padding the text content within, 
+  and utilizing custom fonts, weights, and styles to the page content through css stylesheets.
+    - Searching for <hr> tags taught me that you can find people's css custom stylings online. 
+    - You can coppy these styles into your html/css documents to replicate the effects.
+
+
+    

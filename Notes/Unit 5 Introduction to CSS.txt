@@ -1,0 +1,68 @@
+Introduction to CSS
+
+Objectives: (1) How to use the "general rule" to write valid CSS files
+            (2) How to include a CSS file in an HTML document buy externally linking it.
+            (3) Learn to select html elements from a css document by tag name, class, and ID.
+            (4) Style html elements with basic properties: color, background, and border.
+            (5) Learn to use the chrome inspector tool to debug HTML and CSS.
+
+(1) - CSS is the code that styles your webpage.
+    - These CSS sheets are seperate from the HTML file.
+    - http://www.csszengarden.com/
+      * Great site to see how CSS can be used to customize html documents
+    - CSS "blocks" follow a general rule:
+	    selector {
+	      property: value;
+	      anotherProperty: value;
+	    }
+(2) - Styles can technically be defined element by element, but that is a super inefficient way to go.
+    - Styles can be defined using <style> tags in the head element of an html doc, but it is better
+      to decouple the html from the css by making a separate css document and using a <link> tag
+      in the head of the html to include the css.
+
+
+[color]
+- CSS has about 160 predefined color to use for the property value.
+- You can use any rgb hex value for the color property value.
+- You can use the rgb(decimal#, decimal#, decimal#) identifier number range from
+  0 to 255.
+- You can use the rgba() identifier to specify the three rgb color values and the transparency.
+
+(4) - Background and border work the same as color, but have their own set of property 
+      values to mess around with.
+
+(3) - Id's allow you to style specific, individual elements by marking them in the html and 
+      refering to them with the #id construction in the css.
+    	*Any given id name may only be used one time per html document.
+    - Classes allow you to style multiple, targeted elements by marking them with a class 
+      attribute in the html and refering to them with the .class construction in the css.
+    - Element selectors allow you to select every element of a specific type and style all 
+      of those elements a certain way from the css document.
+    - There are a lot more css selectors that can be used. Here is a site that lists 
+      30 of the most useful: 
+      https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+    - The * css selector allows you to target every element on an html document.
+    - Decendent selectors, a b, allow you to target all elements of type b that are nested
+      within an elemet of type a.
+    - Adjacent Selectors, a + b, allow you to target all elements b that come after element
+      a.
+    - Atribute selectors, element[atribute], allow you to target all elements of a given type
+      with specified atribute.
+    - Nth of type selectors, element:nth-of-type(number), allow you to target the nth element
+      of a specified type.
+    
+
+(5) - The chrome development tools let you view the page source and inspect individual
+      elements to view their html structure and css styling.
+    - You can change the stying in the chrome inspector, but it doesn't change the base file.
+    - I just checked. You can also change the html structure of the document in the inspector,
+      but it doesn't change the base file.
+
+[Inheritance]
+- An element nested within a "parent" element inherits all the style atributes which apply to
+  that parent elements.
+- There are times when multiple styles will be passed to a given element. In these cases there
+  is an order of "specificity" in which the style selectors take precidence.
+    * This order is type selectors < class selectors and atribute selectors < id selectors.
+
+

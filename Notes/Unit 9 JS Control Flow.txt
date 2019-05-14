@@ -1,0 +1,34 @@
+JS Control Flow
+
+Objectives: (1) Be able to evaluate complex logical expressions.
+	    (2) Write 3-part JS conditional statements.
+	    (3) Learn to use for loops and while loops.
+	    (4) Translate from for loops to while loops and vice versa.
+
+(1) - Woo! I succeeded at evaluating complex logical expressions!
+    - There is nothing too it. The operators are or (||), and (&&), not (!), equals type flexible (==),
+      equals type strict (===), and greater than less than (> <).
+    - Parenthases tell the logical statement to evaluate the interior operations before the exterior.
+    - Everything just follows the order of operations.
+
+(2) - Conditional statements are suuuuuper easy with the if, else if, else syntax.
+    - All you need to do is run logical checks in the if and else if blocks, then add the code that you
+      want to run within those blocks.
+
+* shift+windows+down is a fun little hot key I just learned to minimize the current window. I'm going to 
+  use it right now. :)
+
+(3) - While loops [ while(logical check) {} ] run the code in the block over and over until the conditional 
+      rule is broken.
+    - Make sure to check your logical statement ensure that your code doesn't end in an infinite loop.
+    - The chrome console is a nice tool because it will show you the last evaluated logical expression 
+      when a while loop terminates.
+    - Woo! I did all the exersizes and problems in the set!
+    - For loops [ for(init; condition; step) {} ] are another way to repeat code that is primarily used
+      when you know how many iterations you want the loop to run for.
+    - The 'loop variable' only exists inside the loop. This can be handy if you want to keep track of the
+      iterations, but don't want to use up a variable name outside the scope of that loop.
+
+(4) - Translating gets you to think about what your internal variables are, define what your loop cycles 
+      should do, and understand when your loop should terminate.
+    - Any for loop can be written as a while loop, just as any while loop can be written as a for loop.

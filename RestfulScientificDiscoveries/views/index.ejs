@@ -1,0 +1,36 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">
+        The World's Greatest Scientific Discoveries
+    </div>
+    <div class="ui divided items">
+        <% discoveries.forEach( function(discovery) { %>
+            <div class="item segment">
+                <div class="content">
+                    <div>
+                        <%=discovery.title%>
+                    </div>
+                    <div class="ui centered rounded image">
+                        <img src="<%=discovery.image%>">
+                    </div>
+                    <div class="meta">
+                        <p><%= discovery.discoverer %></p>
+                        <p><%= discovery.yearDiscovered %></p>
+                    </div>
+                    <div class="description">
+                        <p><%- discovery.description.substring(0,100) %>...</p>
+                    </div>
+                    <div class="extra">
+                        <a class="ui blue basic button" href="/discoveries/<%= discovery._id %>">
+                            Read More
+                            <i class="right chevron icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ./partials/footer %>

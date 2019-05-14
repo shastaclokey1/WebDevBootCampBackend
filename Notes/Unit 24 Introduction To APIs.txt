@@ -1,0 +1,43 @@
+Introduction To APIs
+
+Objectives (1) What is an API?
+
+(1) - Application Program Interfaces (APIs) allow you to grab data
+      from some external webpage on the internet. 
+    - In Colt's words "API's are interfaces for code/computers to 
+      talk to one another"
+    - HTTP is the protocol that is most widely used to acces APIs
+    - APIs are actually used in all kinds of applications outside
+      of webpages.
+    
+* ifttt.com is a cool site that lets you connect a bunch of api's 
+
+* programmableweb.com is a huuuuuuuge list of api's on the internet.
+    - the apis are nicely sorted
+    - there is sometimes sample code (but not allways)
+    
+* tesla has an api that you can use to control music, lights, doors,
+  charging port, etc through an app if you have the car's unique id.
+  
+* XML and JSON are two data formats used to get information with
+  http requests
+    - XML looks like nested html
+    - json looks like nested javascript objects
+    - json has become much more popular
+    - json requires quotes around the keys for the key-value pairs
+    
+* curl is a cool command line keyword that lets you make http
+  requests
+  - It is more of an educational demonstration to make http requests
+    from the command line
+    
+* eval(require(locus)) is a cool way to essentially set a breakpoint
+  in your web development code. You have to install the locus
+  package with npm i -D locus.
+  
+* `some string stuff ${variable.data} more strings` lets you 
+  concatinate strings without using " " and + signs.
+      - This syntax is part of a new flavor of javascript called
+        es6 that I can go back and learn later. I like the syntax
+        I have been using so far. It makes sense and is similar to
+        the other programming languages I have learned.

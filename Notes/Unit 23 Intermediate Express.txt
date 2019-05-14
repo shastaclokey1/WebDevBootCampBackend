@@ -1,0 +1,49 @@
+Intermediate Express
+
+Objectives (1) Use response.render() to render HTML from EJS files.
+           (2) Learn what EJS is and why we use it.
+           (3) Learn how to pass variablels to EJS templates
+           
+(1) - response.render("fileName.ejs") allows us to render html files from javascript.
+    - render() looks for these ejs files inside the views directory.
+
+(2) - EJS (embedded javascript) lets us embed code inside html.
+    - We can put <%= variable %> around html to make it javascript
+    - To assign variables from our js express to the ejs variables, we
+      have to pass a js object { ejsVar: jsVar } that will map each variable.
+    - (3) once passed using response.render("fileName", {ejsvar: jsvar})
+          we can manipulate the ejsvar in the ejs file just like js as 
+          long as we are inside the <%= ejsvar %> structure.
+          
+Objectives (1) Learn to use control flow in ejs.
+               Learn to write if statements in ejs.
+               Learn to write loops in ejs.
+           
+(1) - <%= expression %> evaluates the enclosed expression and 
+      renders the result to the html
+    - <% logic %> (with no =) evaluates the enclosed logic, but
+      does not render the enclosed code to the html. No equals
+      sign for control flow.
+    - loops and if statements are written exactly the same as usual.
+      you just have to surrount the control flow statements with 
+      <% control flow %> with no "="
+    - You can use <%- %> instead of <%= %> to evaluate the input 
+      string as html.
+      
+* In order to pass data from a form to our server side express code 
+  in a post request, we have to install the npm package "body-parser"
+  in addition to express and ejs.
+  
+* <% include 'relFilePath' %> allows you to include commonly used bits
+  of html to your document that are often repeated.
+  - common uses include headers, footers, or nav bars.
+  
+* omdbapi.com lets you access all the movies on IMDB from http requests
+  - they went private so we need a key to access
+  - colt got a key for all the people in the web dev course
+    append &apikey=thewdb to the end of all http request urls
+
+
+* response.redirect("/some/file/path") lets you redirect to a chosen
+  page when the server recieves a specific get or post request
+  - this is called in the app.get() or app.post() function

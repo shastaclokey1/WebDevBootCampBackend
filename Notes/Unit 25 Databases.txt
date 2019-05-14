@@ -1,0 +1,148 @@
+Databases
+
+* Databases are just a collection of information
+    - persistant across power cycles
+    - hold information even when you close a site
+    
+* Databases exist in two catagories
+    - SQL databases are rigid and require every data "object" be
+      defined the same way
+    - Non Relational databases allow you to be more flexible with
+      what you are storing
+      
+[Mongo Commands]
+* mongod
+    - starts the mongo server
+    - used in a separate terminal tab
+    - has to be run from the same dir where the data dir is
+* mongo
+    - opens up the mongo terminal that lets you interact with
+      the mongo server
+* help
+    - lists the functions you can use with mongo
+* show dbs
+    - lists the names and sizes of all databases on the current mongo server
+* use <database name>
+    - creates a new database with the specified name or opens existing database with specified name
+* insert
+    - db.<collection name>.insert({key:"value", key2:"value2", ...}) inserts an item to the given collection
+    - if the collection does not exist, it creates it
+* find
+    - db.<collection name>.find({key:"value", key2:"value2", ...}) finds all the elements in the collection that
+      match the specified key value pairs
+* update
+    - db.<collection name>.update({selector key value pairs},
+                                  {set key value pairs})
+    - {$set: {update key value pairs}} can be used to maintain existing
+      data fields and add or update specified key value pairs
+    - without $set, the {set key value pairs} gets rid of the old
+      key value pairs and adds the new specified fields
+* remove
+    - remove has the same syntax as find
+    - it removes all elements from the database that match
+      the provided key values pairs
+
+* CRUD is a good acronym to remember the different ways to manipulate a database
+Create
+Read
+Update
+Destroy
+
+* Mongoose is the js interface to mongo databases
+  - This lets you CRUD in your js files
+  - mongoosejs.com is the website for mongoose
+  - mongoose.Schema({}) allows you to define patterns for db objects
+  - mongoose.model("name", schema) gives you a handle to use the
+    mongo commands (find, update, remove, etc)
+  - to use these db commands, we create a new instance of the 
+    model, specify the values of its member variables, then
+    call one of the mongoose commands on it 
+  - the mongoose commands like .save or .find can be passed a 
+    callback funciton(err, objectSavedInDB) to tell the success
+    or falure of the log attempt
+  - you can also call these commands directly on the model object
+    and pass the member variable deffs and callback functions both
+    as command arguments
+    
+* Steps to add data persistance to an app
+  - Start mongo server with ./mongod
+  - Install mongoose in app
+  - require() mongoose in the main js file
+  - connect to the mongo server you started with command:
+    mongoose.connect("mongodb://localhost:27017/dataBaseName", { useNewUrlParser: true })
+  - Set up schema
+  - Use schema to create a model for database objects
+  - Use that model to call:
+      ModelName.create(), ModelName.find() etc
+  - ModelName.findById(id, callback()) lets you find a specific db element
+  - db.collection.drop() lets you delete all the elements in 
+    the specified collection
+
+RESTFUL ROUTES      
+
+name     url        verb     description   
+========================================
+INDEX    /dogs      GET      Display a list of all dogs
+NEW      /dogs/new  GET      Displays a form to make a new dogs
+CREATE   /dogs      POST     Add new dog to DB
+SHOW     /dogs/:id  GET      Shows info about one dog
+
+====================
+RELATIONAL DATABASES:
+====================
+
+USERS TABLE
+id | name  |  age  |  city
+-------------------------
+1  | Tim   |  57   |  NYC           
+2  | Ira   |  24   |  Missoula 
+3  | Sue   |  40   |  Boulder
+
+
+COMMENTS TABLE
+id |       text  
+--------------------------
+1  | "lol"
+2  | "Come visit Montana!"   
+3  | "I love puppies!!!"
+4  | "Seriously Montana is great!"
+
+
+USER/COMMENTS JOIN TABLE
+userId  |  commentId
+---------------------------
+   1         3
+   2         2
+   2         4
+   3         1
+   
+   
+   
+==========================
+A NON-RELATIONAL DATABASES:
+==========================
+{
+  name: "Ira",
+  age: 24,
+  city: Missoula,
+  comments: [
+    {text: "Come visit Montana!"},
+    {text: "Seriously Montana is great!"},
+    {text: "Why does no one care about Montana???"}
+  ],
+  favColor: "purple"
+}
+
+
+{
+  name: "Tammy",
+  age: 24,
+  city: Missoula,
+  comments: [
+    {text: "Come visit Montana!"},
+    {text: "Seriously Montana is great!"},
+    {text: "Why does no one care about Montana???"}
+  ],
+  favFood: "Ribeye"
+}
+

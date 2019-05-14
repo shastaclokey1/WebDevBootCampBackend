@@ -1,0 +1,16 @@
+{
+  "name": "packagejsondemo",
+  "version": "1.0.0",
+  "description": "simple json demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
+  },
+  "author": "Shasta Clokey",
+  "license": "ISC",
+  "dependencies": {
+    "cat-me": "^1.0.3",
+    "express": "^4.16.4"
+  }
+}

@@ -1,0 +1,22 @@
+Introduction To Node
+
+[Objectives] (1) What is node.js
+             (2) Why is node useful?
+             
+(1) - Node is a way for us to write javascript to control the back-end server.
+    - This seems pretty nice because javascript is the only "programming language"
+      we have to learn for web development.
+      
+(2) - Node is pretty popular, but that is not the reason we want to use it.
+    - The most important reason we use node is that it is javascript. We don't
+      have to learn another language.
+    - In the long-term, the server language you use doesn't matter.
+    
+* The node console can be reached by executing the node command with no arguments.
+    - Adding a js argument to the node command runs that js file.
+    
+* npm "node package manager" is a tool that allows us to install 
+  a huge range of open source "libraries" to our back end applications.
+    - (terminal) npm install <packageName> allows us to grab packages and install them.
+    - (javascript) require("packageName") allows you to link npm packages to js code.
+    

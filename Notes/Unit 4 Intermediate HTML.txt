@@ -1,0 +1,32 @@
+Intermediate HTML
+
+Objectives: (1) Learn how to make and structure HTML tables.
+	    (2) Learn how to use the <form>, <input>, <select>, and <label> tags to 
+                make validated forms.
+
+(1) - Tables contain a <thead> and a <tbody>
+    - The header and body each contain row elements <tr> with embedded row entry elements <th> for header
+      and <td> for body.
+    - Tables are pretty straight forward.
+
+* Fun little trick in sublime is to use ctrl + click to make multiple cursors to type the same text in 
+  multiple places.
+
+(2) - Forms using purely html are pretty simple because they can't actually "do" anything. Html forms
+      are the front end piece of the puzzle that allows webpage visitors to enter information on the site.
+    - Javascript and a back end server are nessesary to do anything with the info entered in forms.
+    - The <form> tag is a container that encapsulates the buttons, text input boxes, and labels you put inside.
+    - The action atribute for forms lets you set the url which you want to send the data from the form to.
+    - The method atribute for forms lets you specify the type of http request you want to make on activation of the form.
+    - The <input> tag allows you to insert interactive controlls: text box, date specifier, color chooser, 
+      file picker, etc.
+      *more types on mdn documentation for input
+    - The type atribute lets you specify which kind of input you want.
+    - The <label> tag can be used to aptly label your input fields.
+    - Labels can either wrap around an input element or link onto them using a for/id atribute construct.
+    - Validation atributes can be used on any input field to make sure the visitor has entered info 
+      into the field before hitting the submit button and to make sure that the info follows the correct
+      convention for the type of input field.
+    - When using radio buttons, give all the associated buttons the same "name" atribute to link them up.
+    - Add a value atribute to the radio button input element to specify what to store under the name when submitted.
+    - The <select> tag allows you to add a drop down menu with embedded <option> tags

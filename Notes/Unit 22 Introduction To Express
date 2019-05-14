@@ -1,0 +1,36 @@
+Introduction To Express
+
+Objectives (1) What is a framework? How is it different from a library?
+           (2) What is Express?
+           (3) Why are we using Express?
+
+(1) - Both libraries and frameworks are sets of external code someone else wrote.
+    - Libraries allow you to access and call all of the functions they hold.
+    - Frameworks take all the setup work that all applications need, package
+      it up, and let us fill in the important bits relating to our app.
+    
+(2) - Express is a web application framework.
+    - Express handles creating a server, connecting to a database,
+      and handling all the other basic blocks of a web app.
+
+(3) - Lots of people use express.
+    - That means there are lots of tutorials and help forums.
+    - Express is a very lightweight framework.
+    - That means we can really understand what express is doing.
+    - In order to get things done, you have to know how things work.
+    
+* Every express app that we create will include a file called package.json
+  that contains all the metadata about the page
+    - This includes dependencies, authors, licences, etc.
+    - The most important peice of metadata is the list of dependencies.
+
+* Order of routes matters
+    - First route that matches a given request is the only route that will run.
+    - If the "*" catch all route is run, no other routes will be triggered below it.
+    - The "*" catch all route should be put last.
+
+* Use the ":" operator to signal that the following route path is a list of route parameters.
+    - The "/lksd/lksie pattern after ":" has to have the right number of params to get triggered by a route.
+    - Only the text directly after a : is a parameter.
+    - (Ex) /r/:blah/comments will trigger when /r/iexci/comments is entered
+           but not when /r/iexci/blah is entered.

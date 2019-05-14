@@ -1,0 +1,34 @@
+Authentication
+
+Objectives: (1) learn the three tools we will use
+                - Passport
+                - Passport Local
+                - Passport Local Mongoose
+            (2) Walk through authentication flow
+            (3) Discuss sessions
+                - Express-session
+            
+            
+(1) - Passport is a js library that provides an easy mechanism to add authentication to a site
+    - Local authentication can be used (email and password)
+    - Stratagies like facebook, twitter, etc can be used for authentication and it is super easy
+    - Passport local mongoose makes authentication simple to work with mongoose
+    
+(3) - Http is stateless by default (has no "memory" of past requests or transactions)
+    - Sessions allow you to give your server requests some memory to keep track of your
+      logged in or not state.
+    - Express-session is a tool we can use to pass encrypted log in information to our requests
+      handling server code
+      
+* Routes can be split into multiple files
+    - Each file must declare: var router = express.Router({mergeParams: true});
+    - This router object is used for all the router.get, router.post, etc routes
+    - This router object must be exported from each routes file that will be included in app js (module.exports = router)
+    - Each routes file must be required by the app.js file: var commentRoutes = require("./routes/comments")
+    - To execute the routes inside this route object, just call: app.use(commentRoutes)
+    - To include a "precursor route" to the begining of all routes in a file, just include
+      a parameter to app.use("/campgrounds/:id/comments", commentRoutes)
+    - This allows the separated routes files to be as "dry" as possible.
+      
+* here is the link for passport 
+    http://www.passportjs.org/

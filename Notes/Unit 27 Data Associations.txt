@@ -1,0 +1,14 @@
+Data Associations
+
+* Arrays of js objects can be stored inside of mongoose schemas to "embed"
+  data in the database element
+
+* Instead of storing whole js objects inside of these database element arrays,
+  we can store id's in an array that reference a js object.
+    - This prevents us from using a ton of memory to store one object.
+    - This allows us to store all "comment" type database elements in one
+      place, then reference them from multiple other places.
+      
+* Using module.exports lets you make variables from a js file available for other files
+    - This allows sections of code to be separated out into multiple files and required 
+      by the main code using require("nameOfFile")

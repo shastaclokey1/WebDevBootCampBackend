@@ -1,0 +1,49 @@
+Functions in JS
+
+Objectives: (1) Learn to write function declarations and use them with function expressions.
+	    (2) Be able to explain the difference between loging something and returning something.
+	    (3) Be able to define functions that take multiple arguments.
+	    (4) Learn what scope and higher order functions are.
+
+* Functions, on a first overpass, are like variables that are used to activate a chunk of code.
+* Functions are used to "stay dry" (don't repeat yourself).
+* Clear is a handy function that comes with JS.
+
+(1) - Use the function nameFunction( /*Arguments*/ ) { /*code*/ } to define functions.
+    - Arguments are placeholders for variables that a function expects the user to give it upon execution.
+    - The return keyword allows you to pass information out of the funciton.
+    - Return can only return one value.
+    - Only one return statement can be activated per function.
+    - Functions can also be written with the expression syntax by declaring a variable and setting it equal
+      fo a funciton, ie var hi = function(str) { } .
+    - This is something only to use in specific cases.
+
+(2) - Logging something just prints the value to the console.
+    - Returing a value from a function allows you to save that value to be used later or execute the function
+      within another statement to have the return value inserted at that point.
+
+* The string.replace() function in JS is pretty interesting and lets you perform a lot of complicated 
+  actions. Learn more about it at https://www.w3schools.com/jsref/jsref_replace.asp
+
+(3) - Just add commas betweein each argument you want to pass to a funciton.
+
+(4) - Local variables that are defined within funcitons can only be accessed from within the function.
+    - You can access variables outside a function from within a function by simply using their name accessor without
+      defining it as a new variable.
+    - Scope works the same way as any other programming language.
+    - Scope is not shared between functions.
+    - Higher order functions are functions that take functions as arguments or return functions as outputs.
+    - Passing functions to other functions requires passing only the value. Therefore, we dont use () after
+      the function name.
+    - You can either define a function ahead of time and pass the name accessor, or pass in an anonymous 
+      funciton.
+    - This is what it would look like: outsideFunction( function() { code }, secondArgument, thirdArgument);
+    - Set interval is a way to execute a specified function over and over at a set interval.
+
+[Building a custom version of array.forEach()]
+    - Because we havent learned about classes and the "." operator yet, we will structure our function
+      with two arguments. myForEach(arr, function)
+    - Remember to pas in the reference name for funcitons, not the funciton itself. i.e. don't add
+      the () to the end of the function name.
+    - I did actually learn a first use case of the . operator. We created a function within the 
+      Array.prototype class and then used it in the console.

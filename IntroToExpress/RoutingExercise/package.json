@@ -1,0 +1,14 @@
+{
+  "name": "routingexersise",
+  "version": "1.0.0",
+  "description": "practicing setting up static and dynamic routes with express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shasta clokey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

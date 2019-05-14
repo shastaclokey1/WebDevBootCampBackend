@@ -1,0 +1,60 @@
+Bootstrap Bitches!
+
+Objectives: (1) Be able to define bootstrap and explain how and why to use it.
+	    (2) Learn to include bootstrap either locally or by using a CDN.
+	    (3) Get used to using common bootstrap components like the nav bars and buttons.
+	    (4) Get used to using the bootstrap grid system.
+
+(1) - Bootstrap is an open source html/css collection that allows you to make nice looking web
+      pages verry fast by including different sections of the bootstrap codebase in your projects.
+    - Bootstrap allows you to add nicely styled elements and even whole components like nav bars.
+    - https://getbootstrap.com/
+    - Bootstrap is most commonly used for the grid system, nav bars, and overall fluidity.
+    
+(2) - The bootstrap webpage has download links for the actual source files (css, js, etc...).
+    - When using the source files, just add the desired files to the project directory and
+      link to the bootstrap.css file in the html document.
+    - When using bootstrap with CDN, search for the desired version on google and include the
+      specified CDN link tag into the html document. This will link to a version of the 
+      bootstrap source code hosted on the web.
+    - To use the linked bootstrap.css style library, add class selectors to the html elements
+      as specified in the bootstrap documentation.
+
+(3) - Button sizes, styles, functions can be manipulated by adding bootstrap specified class
+      selectors to either <button> or <a> html elements.
+    - All you have to do to change the default colors of the bootstrap styled elements is
+      link to a second css style sheet and specify the element you want to style by class or
+      id or whatever, then provide new colors, fonts, margins, borders, etc.
+    - All of these bootstrap components are fully detailed in the bootstrap docs. Use the 
+      docs as a reference and look up components as you think of new things to add.
+    - The container class is a nice way to center a bootstrap component.
+    - Three helpful bootstrap classes are form-group (adds nice spacing), form-control 
+      (makes the inputs look nice), and form-inline (makes all the inputs of a form inline).
+    - A good way to make a bs component is to take the example bs markup from the docs and tailor
+      it to your exact needs
+
+(4) - The grid system adds structure and layout to a webpage.
+    - It allows you to divide the screen into pieces and decide how much space each element
+      should be allotted.
+    - The grid is divided into 12 equal segments which can be allotted to elements.
+    - Grids can be embedded within other grids by inserting a div with a row class within
+      a div with a col-size-units class.
+
+*Gallery project
+    - I utilized the grid system to uniformly lay images on the page according to the window
+      scale size. 
+    - I used the thumbnail class to "squish" on a <div> tagthe images so they would fit 
+      within the grid dimensions.
+    - I learned to inspect bootstrap elements to see what class specificity is required to 
+      style different attributes like color, background, and so on.
+    - I learned about glyph icons and how to include them using bootstrap's class definitions.
+    - I utilized https://fontawesome.com/ to add in cooler icons. The documentation is sweet.
+
+*Startup Landing Page
+    - I made a startup landing page for the VR In The Bar idea that Trevor, Warren, and Erik came up with.
+    - To make this happen I utilized the bootstrap grid system, navbar generator, button styling engine, 
+      the google fonts api, and unsplash for a background image.
+    - A fun trick I learned was how to add shadows to elements.
+	-- Just add text shadow or box shaddow properties to the selector tags for html elements and 
+           specify the xy offset, the shadow thickness, and the color of the shadow.
+    - Everything else was fairly similar to what I have done before.

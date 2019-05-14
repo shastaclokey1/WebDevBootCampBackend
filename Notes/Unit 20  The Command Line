@@ -1,0 +1,19 @@
+The Command Line
+
+[Objectives] (1) Learn how to navigate through file directories with cd and ls.
+             (2) Learn how to make files and directories with touch and mikdir.
+             (3) Learn how to remove files and directories with rm and rm -rf.
+
+(1) - cd followed by a directory existing in your current directory moves you to that location.
+    - cd can be chained to move multiple directories at a time.
+    - ls shows all the files and directoriesin the current directory.
+    - ls can be followed by a relative file path to show all the files/folders in a directory 
+      relative to the one you're in.
+
+(2) - touch followed by a string allows you to create a file in the current directory.
+    - mkdir followed by a string allows you to create a folder in the current directory.
+    - To make files/folders with spaces in the name, surround the name string in 'string name'.
+
+(3) - rm followed by a string name removes a file from the current directory.
+    - rm -rf followed by the name of a directory removes that directory from 
+      the current directory.

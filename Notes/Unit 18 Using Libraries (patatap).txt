@@ -1,0 +1,10 @@
+Using Libraries
+
+* Paper.js is a great library for adding animations to javascript projects.
+	- The animations available can be created from scratch, but using paper.js let's
+	  us minimize our work from roughly 50 lines per animation to less than 5
+
+* Howler.js is another great library for adding sounds to javascript projects.
+
+* A canvas is an html element which contains all of our animations and graphics.
+

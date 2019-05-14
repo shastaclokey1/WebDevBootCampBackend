@@ -1,0 +1,41 @@
+Arrays in JS
+
+Objectives: (1) Be able to define arrays, add elements, and remove elements.
+	    (2) Utilize built-in array methods (push, pop, etc...).
+	    (3) Build out a console-based todo list application using arrays.
+
+* JavaScript arrays are dynamic! Woo, love that!
+
+(1) - Defining and initiallizing an array can be done with the [] notation. var names = ["n1", "n2"];
+    - Elements in arrays are indexed from 0 to one less than the number of elements in the array.
+    - These elements can be accessed or set by using the arrayName[index] construction.
+    - You can add an element to the end of an array by setting the value of the array at index one after
+      the last element in the list.
+    - This method of adding elements to arrays can be used for any index. However, adding values to indicies
+      well after the last element in the list creates indicies which access undefined values. This won't 
+      break anything, but it is not an ideal way to manage an array.
+    - Another way to define an array is to use the class initiallizer. var array = new Array(); (this is uncommon)
+    - Arrays can contain more than one 'type' of variable in the same list.
+
+(2) - All the methods you can use on arrays are defined and documented on MDN.
+    - The array.push(elt) method allows you to add an element to the end of an array.
+    - The array.pop() method removes the last element from the array.
+    - The methods array.unshift(elt) *add* and array.shift() *remove* work similarly to push and pop except they act on
+      the beginning of an array.
+    - The array.indexOf(elt) function works the same way as a the similar string funciton. It returns the first
+      index at which the given element can be found. It returns -1 if the element is not found in the list.
+    - The array.slice(start_index, stop_index) function allows you to extract a sub array starting at the start_index
+      and ending one before the stop_index. The original array is unchanged.
+    - Array iteration allows you to loop through each element in an array and do something to or with each element.
+    - The array.forEach(function(elt) {}) function is much easier to iterate through an array. The funciton can be 
+      inline (Anonymous) or predefined.
+    - The internal function within array.forEach actually can take 3 arguments (element, index, array_ref).
+
+(3) - Used a while loop to repeatedly ask user for input until they decided to quit the app.
+    - Used conditionals to determine which action the user wanted to carry out.
+    - Used array.forEach method to display all the items in the todo list.
+    - Refactored logic within conditional branches into seperate functions to make the control flow more clear.
+    - Used the array.splice method to remove a specified element from the todo list.
+
+*Fun fact, global variables from two separate js files added to the same html source page have the same scope and will
+ clash with eachother.

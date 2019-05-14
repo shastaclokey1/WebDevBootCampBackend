@@ -1,0 +1,6 @@
+Color Game Project
+
+Objectives: (1) Practice combining HTML, CSS, and JS.
+	    (2) Use event listeners to handle user interaction.
+	    (3) Make the UI look really nice and responsive with css and js dom manipulation.
+

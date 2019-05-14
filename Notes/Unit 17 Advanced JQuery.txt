@@ -1,0 +1,28 @@
+Advanced JQuery
+
+Objective: Learn the power of the click(), keypress(), and on() jQuery event adding methods.
+
+[click()]
+    - click(callback function) just triggers the callback whenever the attached object is clicked.
+    - click() will add the callback function to every item in a list because jQuery is awesome.
+    - $(this) allows you to specify the listener's calling object from within the callback.
+
+[keydown() keyup() keypress()]
+    - All three functions allow you to add a callback function to key strokes.
+    - keydown() triggers when the key is pressed... down.
+    - keyup() triggers when the key is released.
+    - keypressed() triggers when the character is entered. Thus, shift+a would register as 
+      one keypressed() callback trigger and would register the value 'A'.
+    - accessing the event object within the callback function lets you access all kinds of 
+      properties about the event. Do this by passing a variable to the anonymous function
+      function(event){...}
+    - https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
+
+[on()]
+    - on('listener name', callback) can add annnnny event listener by specifying the name.
+
+[effects]
+    - https://api.jquery.com/category/effects/
+    - Tons of fun efects like fade in/out, animate, etc.
+
+*https://api.jquery.com/category/events/

@@ -1,0 +1,39 @@
+jQuery
+
+Objectives: (1) What is jQuery?
+	    (2) What is a library?
+	    (3) Why would you use jQuery?
+	    (4) Why would you not use jQuery?
+
+(1) - jQuery helps you select, manipulate, and create elements.
+    - It has methods to add event listeners, animate elements, and add effects.
+    - It can even be used to make http requests(AJAX).
+
+(2) - A library is just a bunch of classes and methods that someone created and stuffed into
+      a file that we can include in our code and utilize.
+
+(3) - jQuery can help you keep your code more consise.
+    - It will handle all the cross-browser support you would have to think about otherwise.
+    - AJAx is a realllly handy tool because http requests are kindof a pain.
+    - Lot's of people use jQuery which makes for great tutorials and lots of support forums.
+
+(4) - Vanila js can do everything that jQuery can.
+    - jQuery can be an unnecessarily large dependency if only used for a few things.
+    - Lot's of people are moving away from it.
+
+[jQuery Selectors]
+    - The only selector in jQuery is $("selector")
+    - This selector uses the css selector syntax (. for class, # for id, space for secondary specifier, no prefix for tag)
+    - The .css() function allows you to style the elements you select with $()
+    - This styling function can be used to specify one style and its value, a variable
+      storing multiple styles, or an inline object containing style value pairs.
+
+[jQuery Common Methods]
+    - val(), text(), attr(), html(), addClass(), removeClass(), and toggleClass() are
+      all common jQuery methods that I should be comfortable using.
+    - text() works like the vanila js version of "text content" and allows you to view
+      and change allllll the text contained in a tag (even the text in child tags).
+    - html() allows you to read and update all the html contained within a tag
+    - attr(attribute, newVal) can be used as a setter and attr(attribute) is a getter
+    - val() gets the current value of an input or editable field. It is also a setter
+    - The addClass() removeClass() and toggleClass() functions are pretty self explanatory

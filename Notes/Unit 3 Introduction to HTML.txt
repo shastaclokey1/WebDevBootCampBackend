@@ -1,0 +1,61 @@
+Introduction to HTML
+
+Objectives: (1) Be able to properly structure an HTML document.
+            (2) Understand the difference between closing and self-closing tags.
+            (3) Create a simple HTML document based on a photo provided.
+
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
+
+[Anatomy of HTML elements]
+- HTML allows you to specify pieces of text that are bolded, italicised, indented, links, etc.
+- MDN is a super good resource for information on web development. It is a reference tool.
+- An HTML element consists of an opening tag, some content which can be text, and a closing tag.
+- Atributes are ways to give elements identifiers that can be accessed when specifying style
+  or functionality.
+- Elements can be nested, but ensure that closing tags appear in the opposite order as the opening tags.
+- Empty elements are perfectly legal. A good example of one is an image that has a source 
+  atribute and a name atribute but no content.
+
+[Anatomy of HTML documents]
+- Every HTML document contains the identifier <!DOCTYPE html> at the top of the page because
+  it was once used to specify a set of rules for format and is now just grandfathered in.
+- Every document contains a ROOT ELEMENT, <html></html>, that wraps up all the content on the page.
+- The <head> element contains information that wont be displayed on the page. This information
+  includes descriptions for search results, key words, more good stuff that I'll learn later.
+- Always set the <meta charset-"utf-8"> because it lets you use any textual content from practically
+  any language you can think of.
+- The <title> element sets the title of your page
+- The <body> element stores all the content that you want to be visible on your webpage
+
+[Images]
+- Include a src attribute link to the image file.
+- Image elements can also include an alt attribute to describe the image if it does not load.
+
+[Marking Up Text]
+- Text can be edited using Headings (h1-h4 where h1 is the largest).
+- Text can be put in paragraph blocks.
+- Text can be thrown into lists (ordered or un-ordered).
+
+[Links]
+- Wrap any text in an <a> tag then include an href="" atribute with the desired web address
+  in the quotes to ad a link to a website.
+
+(1) I got that shit! Start every html doc with the <!DOCTYPE html> tag. Wrap the rest of the
+    file in an <html> tag. Include meta data and search info in the <header> tag. Finally, 
+    add all the visible page elements inside the <body> tag.
+
+**Cheat sheet for some useful tags in the slides "Basic Tags" Section 4, Lecture 19.**
+
+[Containers]
+- Div and span are both used to encapsulate sections of an html document.
+- Div is a "block level" element, so it will force the encapsulated content onto a new line.
+- Span is an "in-line" element, so it can be used within blocks of content without breaking flow.
+
+[Elements]
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+- No one needs to memmorize all of the html elements. That's what the reference is for.
+
+[Atributes]
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+- Same story as html elements.
+- Atributes use key/value pairs

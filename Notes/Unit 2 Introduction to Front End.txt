@@ -1,0 +1,28 @@
+Introduction to Front End:
+
+Objectives: (1) Set up development environment (sublime text).
+	    (2) Learn the general differences between front end and back end.
+	    (3) Learn how HTML, CSS, and JS fit together and form the tools for front end dev.
+
+https://www.youtube.com/watch?v=qEdv_pem-JM  
+-Super cool description of how the internet works.
+-Request information from a website and get a response back from the server.
+-Back end development involves processing these requests and figuring out what to send back.
+-Browser takes return information and turns it into visuals that are nice to look at.
+
+(2) - Front end is everything that you see and interact with.
+    - Front end is HTML, CSS, and JS
+    - Everything else is the back end of web development.
+    - Back end can use JS, python, ruby, php for coding; mongo db, node js, etc
+    - Web pages that are purely front end are called static
+    - Web pages that use the back end (servers and what not) to store interactive data
+      are called dynamic.
+
+(3) - HTML allows you to describe the structure of a webpage (nouns).
+    - Every single webpage has HTML.
+    - CSS allows you to describe the style of a webpage (adjectives).
+    - JavaScript is how you add logic and computation to a webpage (verbs).
+
+https://codepen.io/Colt/pen/WQQVvE
+-Fun example of HTML, CSS, and JS working together to make a fun and simple website.
+-This is a cool tool for trying out the front end pieces without using sublime text.

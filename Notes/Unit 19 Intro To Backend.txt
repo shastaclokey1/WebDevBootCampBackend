@@ -1,0 +1,24 @@
+Intro To Backend
+
+Objectives: (1) Review Internet Basics
+	    (2) Learn the difference between Static Vs. Dynamic Sites
+	    (3) Brush on the Stacks/Back End Technologies we will use
+
+(1) - Ip address of website's server location is generated from web address: www.face.com -> 23.243.55.189
+    - An http request is sent to that Ip address with information about the requester and 
+      information about what the request wants in return from the site at the specified ip address.
+    - The server packages up the information requested in to a html/css/js document and sends it to the requester.
+
+(2) - Static webpages contain the same html/css/js every time the page is loaded.
+    - Dynamic webpages will load different html/css/js resources from a server each time a 
+      page is loaded depending on the request that is recieved from users attempting to access the site.
+
+(3) - A generic stack involves front end html/css/js resources that are supported on the
+      back end by a server which is controlled with a chosen language and which utilizes a 
+      chosen form of database.
+    - Ex: Reddit uses python/flask to control its nginx server which utilizes a postgresql
+      database to suport its html/css/js front end site.
+    - stackshare.io is devoted to sharing companies' specific development stacks.
+    - The stack used in this course uses node JS for its backend server scripting language,
+      Express for its server, and MongoDB for its associated database. These back end pieces
+      support the html/css/js front end sites we will create.

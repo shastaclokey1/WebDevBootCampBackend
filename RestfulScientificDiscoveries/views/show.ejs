@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+    <div class="ui main text container segment">
+        <div class="ui huge header"><%= discovery.title %></div>
+        <div class="ui top attached">
+            <div class="item">
+                <img class="ui centered rounded image" src="<%= discovery.image %>">
+                <div class="content">
+                    <p><%= discovery.discoverer %></p>
+                    <p><%= discovery.yearDiscovered %></p>
+                </div>
+                <div class="description">
+                    <p><%- discovery.description %></p>
+                </div>
+                <a class="ui green basic button" href="/discoveries/<%= discovery._id %>/edit">Edit</a>
+                <form id="delete" action="/discoveries/<%=discovery._id%>?_method=DELETE" method="POST">
+                    <button class="ui red basic button">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<% include ./partials/footer %>

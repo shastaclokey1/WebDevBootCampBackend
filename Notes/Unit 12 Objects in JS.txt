@@ -1,0 +1,32 @@
+Objects in JS
+
+Objectives: (1) Understand objects conceptually.
+	    (2) How do we write some code using objects? How to use objects effectively.
+
+(1) - JavaScript objects are just variables that are lists of key value pairs.
+    - The items listed in an object are not "ordered".
+    - A JS object looks like this: var object_name = { ob_var1: value, ob_var2: value, ... };
+    - To access the variables within an object, either use object_name["key_name"]
+      or object_name.key_name .
+    - Don't start your object property names with number and don't put spaces in the property
+      names. These two things will stop you from using the . operator.
+    - JS objects are the equivalent of "dictionaries" in other languages.
+    - You can use this JS object notation (lolz json), in conjunction with arrays,
+      to build pretty cool data structures. For instance, you can have an array of objects
+      that each contain multiple variables and arrays.
+
+(2) - Using objects is pretty simple. All you need is to add key value pairs between curly braces
+      with commas inbetween each pair.
+    - You can also add funcitons to these objects. They are called "methods" of the object.
+    - To give an object a method, simply name the method on the left side of the key value
+      pair and define an inline or (anonymous) function on the right side of the pair. i.e
+      sample_func : function(arg1, arg2, arg3) { /*execute some code*/ return someValue; }
+    - To call an object method, access the method identifier with class.methodName() and 
+      make sure to add the open/closed parentheses with your desired arguments enclosed.
+    - Adding methods to objects lets you have two functions with the same name that can perform
+      different jobs because they are properties of different objects.
+    - The "this" identifier allows you to reference the object which the method is a part of.
+
+* Underscore.js is a nice library of JS functions for all occassions. All of the functions from
+  this library is grouped underneath the _ object identifier. Using a method would look like
+  this: _.find()
