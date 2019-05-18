@@ -52,18 +52,14 @@ router.get("/:id", function(request, response) {
 });
 
 //EDIT- Show form to edit campground info
-router.get("/:id/edit", function(request, response) {
-    Campground.findById(request.params.id, function(err, campgroundInDB) {
-         if (err) {
-             response.redirect("/campgrounds");
-         } else {
-             response.render("campgrounds/edit", {campground: campgroundInDB});
-         }
-    })
+router.get("/:id/edit", checkCampgroundOwnership, function(request, response) {
+    Campground.findById(request.params.id, function(_err, campgroundInDB) {
+        response.render("campgrounds/edit", {campground: campgroundInDB});
+    });
 });
 
 //UPDATE- update campground with information from form
-router.put("/:id", function(request, response) {
+router.put("/:id", checkCampgroundOwnership, function(request, response) {
     Campground.findByIdAndUpdate(request.params.id, request.body.campground, function(err, updatedCampgroundInDB) {
         if (err) {
             response.redirect("/campgrounds");
@@ -74,7 +70,7 @@ router.put("/:id", function(request, response) {
 });
 
 //DESTROY- remove a specific campground from database
-router.delete("/:id", function(request, response) {
+router.delete("/:id", checkCampgroundOwnership, function(request, response) {
     Campground.findByIdAndRemove(request.params.id, function(err, campgroundInDB) {
         if (err) {
             console.log(err);
@@ -94,6 +90,24 @@ function isLoggedIn(request, response, next) {
         return next();
     } else {
         response.redirect("/login");
+    }
+}
+
+function checkCampgroundOwnership(request, response, next) {
+    if (request.isAuthenticated()) {
+        Campground.findById(request.params.id, function(err, campgroundInDB) {
+            if (err) {
+                response.redirect("back");
+            } else {
+                if (campgroundInDB.author.id.equals(request.user._id)) {
+                    next();
+                } else {
+                    response.redirect("back");
+                }
+            }
+       });
+    } else {
+        response.redirect("back");
     }
 }
 
