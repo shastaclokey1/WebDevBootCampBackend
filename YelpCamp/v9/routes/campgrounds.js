@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router({mergeParams: true});
 var Campground = require("../models/campground");
+var Comment = require("../models/comment");
 
 //INDEX  - show list of all campgrounds
 router.get("/", function(request, response){
@@ -50,6 +51,7 @@ router.get("/:id", function(request, response) {
     });
 });
 
+//EDIT- Show form to edit campground info
 router.get("/:id/edit", function(request, response) {
     Campground.findById(request.params.id, function(err, campgroundInDB) {
          if (err) {
@@ -60,12 +62,29 @@ router.get("/:id/edit", function(request, response) {
     })
 });
 
+//UPDATE- update campground with information from form
 router.put("/:id", function(request, response) {
     Campground.findByIdAndUpdate(request.params.id, request.body.campground, function(err, updatedCampgroundInDB) {
         if (err) {
             response.redirect("/campgrounds");
         } else {
             response.redirect("/campgrounds/" + request.params.id);
+        }
+    });
+});
+
+//DESTROY- remove a specific campground from database
+router.delete("/:id", function(request, response) {
+    Campground.findByIdAndRemove(request.params.id, function(err, campgroundInDB) {
+        if (err) {
+            console.log(err);
+        } else {
+            Comment.deleteMany({_id: {$in: campgroundInDB.comments}}, function(err) {
+                if (err) {
+                    console.log(err);
+                }
+                response.redirect("/campgrounds");
+            });
         }
     });
 });
