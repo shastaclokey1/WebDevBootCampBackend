@@ -26,7 +26,7 @@ router.post("/register", function(request, response) {
 });
 
 router.get("/login", function(request, response) {
-    response.render("login");
+    response.render("login", {message: request.flash("error")});
 });
 
 router.post("/login", passport.authenticate("local", 
@@ -41,13 +41,5 @@ router.get("/logout", function(request, response) {
     request.logout();
     response.redirect("/campgrounds");
 });
-
-function isLoggedIn(request, response, next) {
-    if (request.isAuthenticated()) {
-        return next();
-    } else {
-        response.redirect("/login");
-    }
-}
 
 module.exports = router;
