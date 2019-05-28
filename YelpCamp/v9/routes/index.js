@@ -26,7 +26,7 @@ router.post("/register", function(request, response) {
 });
 
 router.get("/login", function(request, response) {
-    response.render("login", {message: request.flash("error")});
+    response.render("login");
 });
 
 router.post("/login", passport.authenticate("local", 
@@ -39,6 +39,7 @@ router.post("/login", passport.authenticate("local",
 
 router.get("/logout", function(request, response) {
     request.logout();
+    request.flash("error", "Logged you out!");
     response.redirect("/campgrounds");
 });
 
