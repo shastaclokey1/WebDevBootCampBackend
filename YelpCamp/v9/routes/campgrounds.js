@@ -8,7 +8,6 @@ var Middleware = require("../middleware/");
 router.get("/", function(request, response){
     Campground.find({}, function(err, allCampgroundsInDB) {
        if (err) {
-           console.log("OH NO, ERROR!");
            console.log(err);
        } else {
            response.render("campgrounds/index", {campgrounds: allCampgroundsInDB});
