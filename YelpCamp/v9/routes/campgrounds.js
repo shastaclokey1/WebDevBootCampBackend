@@ -18,13 +18,14 @@ router.get("/", function(request, response){
 //CREATE - add campground to the DB
 router.post("/", Middleware.isLoggedIn, function(request, response){
     var name = request.body.name;
+    var price = request.body.price;
     var image = request.body.image;
     var description = request.body.description;
     var author = {
         id: request.user._id,
         username: request.user.username
     };
-    var newCampground = {name: name, image: image, description: description, author: author};
+    var newCampground = {name: name, price: price, image: image, description: description, author: author};
     Campground.create(newCampground, function(err, newlyCreated){
         if (err) {
             console.log(err);
