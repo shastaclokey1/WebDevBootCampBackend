@@ -1,0 +1,23 @@
+[the JS keyword 'this']
+* reserved keyword in JavaScript
+* 'this' is determined by four rules (global, object/implicit, explicit, new)
+    - When 'this' is used outside a declared object, it references the base container of the 
+      application(in the browser this is the window).
+    - I can accidentally declare global variables by using this.newitemname inside a function or outside
+      a declared object.
+    - The value of the keyword this will always be the closest parent object.
+    - Call, Apply, and Bind are used to explicitly set the value of the keyword 'this'
+      object.functionName.call(objectToSetAsThis, functionParam1, functionParam2, functionParam3, ...)
+      object.functionName.apply(objectToSetAsThis, [functionParam1, functionParam2, functionParam3, ...])
+      var functionForLater = object.functionName.bind(objectToSetAsThis, functionParam1, functionParam2, functionParam3, ...)
+    - A timeout being activated later will have a default global context. To resolve this, use bind on the
+      callback to set the context to whatever object you want.
+    - The value of 'this' changes when the new keyword is used
+
+[Object Oriented Programming]
+
+Objectives:
+(1) Define what OOP is
+(2) Understand the four things the 'new' keyword does
+(3) Use constructors to create objects
+(4) Use call and apply to refactor the constructors
