@@ -33,3 +33,13 @@ Objectives:
     - This reuse of constructors is very similar to inheritance in class supporting languages.
     - We don't need to make a function to be called later, so bind 
       typically will not be used in this case. 
+
+* __proto__ is the object that specifies methods and objects inherited by parent classes when 
+  creating JS constructors/prototypes
+
+* most methods should be added to __proto__ to prevent each instance from redefining functions
+
+More Objectives:
+(5) Understand what a 'closure' is in JS
+(6) Understand how to use closure to emulate a private variables
+(7) Understand a couple of 'real world' use cases for closure
