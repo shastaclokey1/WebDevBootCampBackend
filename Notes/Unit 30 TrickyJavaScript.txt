@@ -21,3 +21,15 @@ Objectives:
 (2) Understand the four things the 'new' keyword does
 (3) Use constructors to create objects
 (4) Use call and apply to refactor the constructors
+
+(1) - Object Oriented Programming (OOP) is a way to create object blueprints (classes)
+      which can be reused over and over to create new objects (instances).
+(2) - The 'new' keyword creates an object, local to the function, sets the keyword
+      'this' equal to that object, adds an implicit "return this" to the end of the function,
+      and gives acces to __proto__ (dunder proto). I dont know what dunder proto does yet.
+(3) - Constructor functions utilize the keyword 'this' to create object instances.
+    - They need to be called with the 'new' keyword to instantiate an object.
+(4) - The call/apply/bind methods can be used to call one constructor inside another.
+    - This reuse of constructors is very similar to inheritance in class supporting languages.
+    - We don't need to make a function to be called later, so bind 
+      typically will not be used in this case. 
