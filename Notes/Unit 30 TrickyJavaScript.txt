@@ -41,5 +41,8 @@ Objectives:
 
 More Objectives:
 (5) Understand what a 'closure' is in JS
+    - closure allows you to "hide" methods and variables by wrapping one funciton in another funciton where the
+      inner function is returned by the outer function. The programmer has access to the inner function's variables
+      and methods, but not the outer funciton's. The inner function has access to the outer functions methods/variables.
 (6) Understand how to use closure to emulate a private variables
 (7) Understand a couple of 'real world' use cases for closure
